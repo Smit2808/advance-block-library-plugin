@@ -1,0 +1,285 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.abl-page-wrapper * {
+    box-sizing: border-box;
+}
+
+.abl-page-wrapper {
+    margin-left: -20px;
+}
+
+
+.abl-page-wrapper .container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.abl-heading {
+    text-align: center;
+    padding: 30px 40px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    background-color: #032539;
+}
+
+.abl-heading__title {
+    text-transform: uppercase;
+    font-size: 52px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    color: #ffffff;
+}
+
+.abl-list {
+    margin: 20px 30px 0px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    background-color: #fa991c;
+}
+
+.abl-list-heading {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.abl-list-heading__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.abl-list-heading__desc {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.abl-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    margin-right: -10px;
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 1;
+}
+
+.abl-list-container .abl-block {
+    margin: 0 20px 10px 0;
+    padding: 25px 20px;
+    border: 1px solid #1c768f;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(28, 118, 143, 0.3);
+    background-color: #fbf3f2;
+}
+
+.abl-list-container .abl-block__name {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.abl-list-container .abl-block__desc {
+    font-size: 16px;
+}
+
+.abl-block .abl-btn .abl-toggle__btn {
+    background-color: forestgreen;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.abl-block .abl-btn .abl-toggle__btn.deactive {
+    background-color: #ff0800;
+    color: #ffffff;
+}
+
+/* Background Css */
+.area {
+    width: 100%;
+    height: 100vh;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(249, 249, 249, 0.8);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+/* Toggle Button Css */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
