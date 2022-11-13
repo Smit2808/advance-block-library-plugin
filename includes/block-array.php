@@ -24,7 +24,15 @@ function abl_blocks_list(){
             'parent-class'      => 'abl_blogs_listing_block',
             'name'  			=> __( 'Blogs Listing Block', 'advance-block-library' ),
             'desc'  			=> __( 'List out the blogs dynamically', 'advance-block-library' )        
-        )
+        ),
+        'abl/timeline-block'      => array(
+            'slug'				=> 'abl/timeline-block',
+            'dest'				=> '/static-blocks/timeline-block',
+            'dynamic'           =>  false,
+            'parent-class'      => 'abl_timeline_block',
+            'name'  			=> __( 'Timeline Block', 'advance-block-library' ),
+            'desc'  			=> __( 'Add title and descriptions and it will display in timeline form', 'advance-block-library' )        
+        ),
     );
     
     return $blocks;

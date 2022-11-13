@@ -32,7 +32,7 @@ class Advance_Block_Library_Activator {
 	public static function activate() {
 		update_option( 'abl_active_blocks' ,maybe_serialize( array() ) );
 		wp_redirect( admin_url( '/admin.php?page=abl_admin_setting' ) );
-		exit;
+		
 	}
 
 }
