@@ -131,28 +131,29 @@ class BlockComponent extends Component {
 		return [
 			<Fragment>
 				<div className="timeline">
-					<div className="timeline__line-wrapper">
+					<div className="timeline__line-wrapper timeline__line-wrapper--editor-side">
 						<div className="timeline__line"></div>
 					</div>
 					{DataArrayList}
 					<div className="timeline__item--add">
-						<button
-							className="components-button add"
-							onClick={() => {
-								setAttributes({
-									DataArray: [
-										...DataArray,
-										{
-											index: DataArray.length,
-											title: "",
-											description: "",
-										},
-									],
-								});
-							}}
-						>
-							Add item
-						</button>
+						<Tooltip text="Add item">
+							<i
+								className="fa fa-plus add-new-item"
+								onClick={() => {
+									setAttributes({
+										DataArray: [
+											...DataArray,
+											{
+												index: DataArray.length,
+												title: "",
+												description: "",
+											},
+										],
+									});
+								}}
+							>
+							</i>
+						</Tooltip>
 					</div>
 				</div>
 			</Fragment>,
@@ -163,7 +164,7 @@ class BlockComponent extends Component {
 registerBlockType("abl/timeline-block", {
 	title: "Timeline Block",
 	description: "Timeline Block displays your title and description in timeline form.",
-	icon: "groups",
+	icon: "editor-ul",
 	category: "common",
 	attributes: {
 		DataArray: {
