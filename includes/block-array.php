@@ -33,6 +33,14 @@ function abl_blocks_list(){
             'name'  			=> __( 'Timeline Block', 'advance-block-library' ),
             'desc'  			=> __( 'Add title and descriptions and it will display in timeline form', 'advance-block-library' )        
         ),
+        'abl/feature-posts-block'      => array(
+            'slug'				=> 'abl/feature-posts-block',
+            'dest'				=> '/dynamic-blocks/feature-posts-block',
+            'dynamic'           =>  true,
+            'parent-class'      => 'abl_feature_posts_listing_block',
+            'name'  			=> __( 'Featured Posts Listing Block', 'advance-block-library' ),
+            'desc'  			=> __( 'List out the featured posts dynamically', 'advance-block-library' )        
+        ),
     );
     
     return $blocks;

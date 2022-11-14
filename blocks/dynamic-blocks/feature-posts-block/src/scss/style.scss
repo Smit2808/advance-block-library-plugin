@@ -1,0 +1,7 @@
+.wp-site-blocks .wp-container-7 > :where(:not(.alignleft):not(.alignright)){max-width: 100%;}
+.entry-content > * {max-width: 100% !important;}
+.container{
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
